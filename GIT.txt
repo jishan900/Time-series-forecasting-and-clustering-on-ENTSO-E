@@ -1,0 +1,21 @@
+git init .
+git add .
+git commit -m "analysis"
+git remote add origin https://github.com/jishan900/ENTSO-E
+git push -u origin master
+git push -f origin master
+
+
+Branch-------------
+
+git checkout -b new-branch-name
+git add .
+git commit -m "Your commit message"
+git push -u origin new-branch-name
+
+
+Jupyter Notebook to a GitHub repository--------------
+git add .
+git commit -m "Update notebook"
+git push -u origin master
+git push -f origin master
