@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Spyder Editor
+Author: Jishan 
 
-This is a temporary script file.
 """
 from entsoe import EntsoePandasClient
 import pandas as pd
@@ -10,7 +10,7 @@ import pandas as pd
 client = EntsoePandasClient(api_key="194685ce-04f3-4822-8293-6af13a07b0b9")
 
 start = pd.Timestamp('2023-03-12 00:00', tz='Europe/Brussels')
-end = pd.Timestamp('2024-03-12 23:59', tz='Europe/Brussels')
+end = pd.Timestamp('2024-04-12 23:59', tz='Europe/Brussels')
 country_code = 'DE_LU'  # Germany-Luxembourg Bidding Zone
 country_code_from = 'DE_LU'  # Assuming transactions or flows within the same market area
 country_code_to = 'DE_LU'  # Assuming transactions or flows within the same market area
@@ -60,9 +60,9 @@ client.query_generation(country_code, start=start, end=end)
 
 
 import os
-path = 'C:/Users/Asifuzzaman.jishan/Downloads/ENTSO-E_API_Py/CSV_data'
+path = 'C:/Users/Asifuzzaman.jishan/Downloads/ENTSO-E_Data_analysis_and_ml/CSV_Data/'
 os.mkdir(path)
 
 ts = client.query_generation(country_code, start=start, end=end)
-ts.to_csv('C:/Users/Asifuzzaman.jishan/Downloads/ENTSO-E_API_Py/CSV_data/expected_csv_data.csv')
+ts.to_csv('C:/Users/Asifuzzaman.jishan/Downloads/ENTSO-E_Data_analysis_and_ml/CSV_Data/expected_csv_data.csv')
 print('CSV saved!')
