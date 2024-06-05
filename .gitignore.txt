@@ -1,2 +1,0 @@
-# Jupyter Notebook
-/Jupyter_Notebook/.ipynb_checkpoints/
