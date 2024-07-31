@@ -1,7 +1,7 @@
 git init .
 git add .
 git commit -m "analysis"
-git remote add origin https://github.com/jishan900/ENTSO-E
+git remote add origin https://github.com/jishan900/Time-series-forecasting-and-clustering-on-ENTSO-E
 git push -u origin master
 git push -f origin master
 
