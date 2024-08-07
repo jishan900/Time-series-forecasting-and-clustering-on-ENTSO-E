@@ -5,6 +5,9 @@ authors:
   - family-names: "Jishan"
     given-names: "Md Asifuzzaman"
     orcid: "https://orcid.org/0000-0001-9540-5614"
+  - family-names: "Kramer"
+    given-names: "Hendrik"
+   
 version: "1.0"
 date-released: "2024-06-05"
 url: "https://github.com/jishan900/Time-series-forecasting-and-clustering-on-ENTSO-E"
