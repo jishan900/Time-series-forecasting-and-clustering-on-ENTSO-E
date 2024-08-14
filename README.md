@@ -26,6 +26,10 @@ The project culminated in applying PCA for dimension reduction and K-means clust
 
 
 
+
+
+
+
 ## The research question of the project
 
 #### Data Collection and Preprocessing
@@ -76,10 +80,17 @@ The project culminated in applying PCA for dimension reduction and K-means clust
 
 
 
+
+
+
+
 ## Dataset 
 The data, collected using the ENTSO-E API, was subjected to a comprehensive analysis and machine learning process, employing various statistical and data visualization techniques to extract meaningful insights. The dataset was retrieved through a Python script leveraging the ENTSO-E API, ensuring a systematic and automated data collection process. Initial data analysis included handling missing values, renaming columns for clarity, and fixing data types to ensure consistency and accuracy.
 
 **Data collection URL :** [ENTSO-E](https://transparency.entsoe.eu/generation/r2/actualGenerationPerProductionType/show?name=&defaultValue=false&viewType=TABLE&areaType=BZN&atch=false&datepicker-day-offset-select-dv-date-from_input=D&dateTime.dateTime=12.03.2024+00:00|CET|DAYTIMERANGE&dateTime.endDateTime=12.03.2024+00:00|CET|DAYTIMERANGE&area.values=CTY|10Y1001A1001A83F!BZN|10Y1001A1001A82H&productionType.values=B01&productionType.values=B02&productionType.values=B03&productionType.values=B04&productionType.values=B05&productionType.values=B06&productionType.values=B07&productionType.values=B08&productionType.values=B09&productionType.values=B10&productionType.values=B11&productionType.values=B12&productionType.values=B13&productionType.values=B14&productionType.values=B20&productionType.values=B15&productionType.values=B16&productionType.values=B17&productionType.values=B18&productionType.values=B19&dateTime.timezone=CET_CEST&dateTime.timezone_input=CET+(UTC+1)+/+CEST+(UTC+2))
+
+
+
 
 
 
@@ -93,6 +104,9 @@ First, make sure that Python 3.9.13 is installed in the Jupyter Notebook along w
 - Then, step by step, execute the cell of the Jupyter Notebook and view the analysis results. 
 - Execute the program and run the Script_1 in Jupyter Notebook for new CSV data analysis, visualization, time series implementation, and clustering. This CSV will be saved from the previous script in a new directory and come from clustering and data reconstruction.
 - Then, step by step, execute the cell of the Jupyter Notebook and view the analysis results. 
+
+
+
 
 
 
@@ -110,12 +124,18 @@ pip install numpy pandas matplotlib seaborn plotly os scikit-learn
 
 
 
+
+
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jishan900/Time-series-forecasting-and-clustering-on-ENTSO-E/blob/master/LICENSE.txt) file for details.
 
 ## Citation 
-[CITATION](https://github.com/jishan900/Time-series-forecasting-and-clustering-on-ENTSO-E/blob/master/CITATION.cff)
+For citation of this project - see the [CITATION](https://github.com/jishan900/Time-series-forecasting-and-clustering-on-ENTSO-E/blob/master/CITATION.cff) file for details.
+
+
+
 
 
 
@@ -128,4 +148,4 @@ For questions or issues, please contact:
 
 ## Acknowledgements
 
-- [ENTSO-E](https://www.entsoe.eu/) for providing the data.
+We would like to express our gratitude to [ENTSO-E](https://www.entsoe.eu/) (European Network of Transmission System Operators for Electricity) for their invaluable support in providing the data that was crucial for the completion of this project. Their comprehensive data sets and timely assistance were instrumental in enabling the analysis and insights presented in this work. Thank you for your commitment to fostering research and development in the field of energy systems.
