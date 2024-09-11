@@ -13,7 +13,7 @@ Given the high dimensionality of the dataset, Principal Component Analysis (PCA)
 Subsequently, K-means clustering was applied to the PCA-transformed data to identify inherent patterns and groupings within the dataset. The optimal number of clusters was determined using the Elbow Method and silhouette scores, ensuring robust and meaningful clustering results.
 
 
-The PCA and K-means clustering results were used to reconstruct the original time series data. This involved mapping the reduced dimensions back to the original feature space, ensuring that the reconstructed data closely resembled the initial dataset. The reconstructed data was then saved to a new CSV file for further analysis.
+The PCA and K-means clustering results were used to reconstruct the original time series data. This involved mapping the reduced dimensions back to the original feature space, ensuring that the reconstructed data closely resembled the initial dataset. The reconstructed data was then saved to a new CSV file for further analysis. Moreover, a comparison between the clustering graph and the original data is also represented here. 
 
 
 The newly reconstructed dataset underwent additional rounds of analysis to verify the integrity and accuracy of the clustering and reconstruction process. Missing values were addressed, data types were corrected, and comprehensive visualizations of weekly time series data were produced.
