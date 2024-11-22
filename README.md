@@ -1,28 +1,41 @@
 # ENTSO-E Data Analysis and Machine Learning (Time series forecasting and clustering on ENTSO-E)
 
-This project focuses on the analysis and clustering of time series data from the European Network of Transmission System Operators for Electricity (ENTSO-E). The data, collected using the ENTSO-E API, was subjected to a comprehensive analysis and machine learning process, employing various statistical and data visualization techniques to extract meaningful insights.
+This project focuses on analyzing and clustering time series data from the European Network of Transmission System Operators for Electricity (ENTSO-E). It incorporates advanced machine learning methods, including **K-Means**, **K-Medoids**, and **Hierarchical Clustering**, to extract meaningful patterns. These methods are further enhanced by **Principal Component Analysis (PCA)** for dimensionality reduction.
 
-The dataset was retrieved through a Python script leveraging the ENTSO-E API, ensuring a systematic and automated data collection process. Initial data analysis included handling missing values, renaming columns for clarity, and fixing data types to ensure consistency and accuracy.
+This project focuses on the analysis and clustering of time series data from the European Network of Transmission System Operators for Electricity (ENTSO-E). The data, collected using the ENTSO-E API, underwent a comprehensive analysis and machine learning process, incorporating advanced statistical, dimensionality reduction, and clustering techniques to extract meaningful insights.
 
-The dataset comprises time series data sampled every 15 minutes over one year. Key statistical measures such as mean, median, variance, minimum, and maximum values were calculated for all variables. Weekly-based time series data (52 weeks) were visualized to observe trends and patterns over time.
+The dataset was retrieved through a Python script leveraging the ENTSO-E API, ensuring a systematic and automated data collection process. Initial data preprocessing included handling missing values, renaming columns for clarity, and ensuring consistent data types for accuracy and reliability.
 
-Descriptive statistics including mean, median, quantile, and percentile were computed for all variables to provide a comprehensive understanding of the data distribution. These statistics were visualized to facilitate an intuitive grasp of the dataset's characteristics.
+The dataset comprises time series data sampled every 15 minutes over one year. Initial analysis included key statistical measures such as mean, median, variance, minimum, and maximum values, calculated for all variables. Weekly-based time series data (52 weeks) were visualized to identify temporal trends and patterns.
 
-Given the high dimensionality of the dataset, Principal Component Analysis (PCA) was employed to reduce the dimensionality while retaining approximately 95% of the variance. This reduction facilitated more efficient processing and analysis.
+Descriptive statistics, including mean, median, quantile, and percentile, were computed and visualized for a comprehensive understanding of the data distribution. This facilitated identifying outliers and understanding the variability within the dataset.
 
-Subsequently, K-means clustering was applied to the PCA-transformed data to identify inherent patterns and groupings within the dataset. The optimal number of clusters was determined using the Elbow Method and silhouette scores, ensuring robust and meaningful clustering results.
+### Dimensionality Reduction
+Given the high dimensionality of the dataset, **Principal Component Analysis (PCA)** was employed to reduce the dimensionality while retaining approximately 95% of the variance. This enabled efficient processing and visualization of the dataset.
+
+### Clustering Approaches
+Multiple clustering techniques were applied to the PCA-transformed data to uncover inherent patterns:
+1. **K-means Clustering**: 
+   - The optimal number of clusters was determined using the **Elbow Method** and **Silhouette Scores**.
+   - Clustering results were visualized, and the clusters were interpreted in relation to the dataset's original features.
+
+2. **K-Medoids Clustering**:
+   - An alternative to K-means, focusing on minimizing dissimilarities within clusters.
+   - Performance and silhouette scores were compared with K-means to evaluate clustering stability.
+
+3. **Hierarchical Clustering**:
+   - This approach involved clustering based on a dendrogram to explore data hierarchies.
+   - The silhouette scores for various cluster numbers were evaluated to select the optimal number of clusters.
 
 
-The PCA and K-means clustering results were used to reconstruct the original time series data. This involved mapping the reduced dimensions back to the original feature space, ensuring that the reconstructed data closely resembled the initial dataset. The reconstructed data was then saved to a new CSV file for further analysis. Moreover, a comparison between the clustering graph and the original data is also represented here. 
+### Reconstructed Dataset
+The PCA-transformed and clustered data were reconstructed back into the original feature space to validate clustering accuracy and interpretability. The reconstructed data was saved to a new CSV file for downstream analysis. Comparative analyses, including clustering graph visualizations and original time series trends, provided additional insights into the clustering's effectiveness.
 
+### Comprehensive Comparisons
+The project included detailed comparisons of clustering methods:
+- **Silhouette Score Analysis**: Evaluated clustering performance across PCA components and methods.
 
-The newly reconstructed dataset underwent additional rounds of analysis to verify the integrity and accuracy of the clustering and reconstruction process. Missing values were addressed, data types were corrected, and comprehensive visualizations of weekly time series data were produced.
-
-
-The project culminated in applying PCA for dimension reduction and K-means clustering to the reconstructed dataset, reaffirming the robustness of the clustering model and providing a detailed understanding of the underlying patterns in the ENTSO-E time series data.
-
-
-
+This iterative process of dimension reduction, clustering, and reconstruction ensured robust insights into the ENTSO-E time series data and the identification of meaningful clusters.
 
 
 
@@ -57,19 +70,22 @@ The project culminated in applying PCA for dimension reduction and K-means clust
 - How can K-means clustering be applied to the PCA-transformed data to identify distinct patterns or groups in the electricity consumption and transmission data?
 - What is the optimal number of clusters as determined by the Elbow Method and silhouette scores?
 - How do the identified clusters differ in terms of their statistical and temporal characteristics?
+- How does K-medoids clustering compare to K-means in identifying clusters, especially in terms of silhouette scores and robustness?
+- How can hierarchical clustering (using Ward linkage) be applied to the PCA-transformed data to explore hierarchical relationships between clusters?
+- What is the optimal number of clusters for hierarchical clustering based on silhouette scores, and how do these clusters compare to those found by K-means and K-medoids?
 
 
 #### Reconstruction and Validation
 
-- How can the original time series data be reconstructed from the PCA and K-means clustering results to ensure it closely resembles the initial dataset?
-- What methods can be used to validate the accuracy and integrity of the reconstructed time series data?
+- How can the original time series data be reconstructed from the results of PCA and clustering methods (e.g., K-means, K-medoids, hierarchical) to ensure it closely resembles the initial dataset?
+- What metrics and methods can be used to validate the accuracy, integrity, and representativeness of the reconstructed time series data?
 
 
 #### Further Analysis on Reconstructed Data
 
-- How does the analysis of the reconstructed dataset compare to the original dataset in terms of statistical measures and visual patterns?
-- What additional insights can be gained from reapplying PCA and K-means clustering to the reconstructed dataset?
-
+- How does the analysis of the reconstructed dataset compare to the original dataset in terms of statistical measures, temporal trends, and visual patterns?
+- What additional insights can be gained from reapplying PCA and clustering methods (K-means, K-medoids, hierarchical) to the reconstructed dataset?
+- How do the clusters identified in the reconstructed dataset corroborate or refine the findings from the original clustering analysis?
 
 
 ## Requirements
@@ -100,9 +116,11 @@ First, make sure that Python 3.9.13 is installed in the Jupyter Notebook along w
 
 - Clone the git repository or download the ZIP file.
 - Navigate to the project directory.
+- Change the dataset path and all folders path. 
 - To execute the program, run the Script in Jupyter Notebook for data analysis, visualization, time series implementation, clustering, saving new CSV from the cluster, etc.
 - Then, step by step, execute the cell of the Jupyter Notebook and view the analysis results. 
 - Execute the program and run the Script_1 in Jupyter Notebook for new CSV data analysis, visualization, time series implementation, and clustering. This CSV will be saved from the previous script in a new directory and come from clustering and data reconstruction.
+- Follow the step 6 for the Script_2.
 - Then, step by step, execute the cell of the Jupyter Notebook and view the analysis results. 
 
 
